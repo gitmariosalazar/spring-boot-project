@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app_hexagonal:
+    build: hexagonal
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      SB_DBURL: jdbc:mysql://mysql_hexagonal:3306/hexagonal?createDatabaseIfNotExist=true&serverTimezone=UTC
+      SB_USERDB: root
+      SB_DBPASSWORD: password-mario
+    restart: always
+    depends_on:
+      mysql_hexagonal:
+          condition: service_healthy
+  mysql_hexagonal:
+    image: mysql:8.0.39
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password-mario
+      MYSQL_PASSWORD: password-mario
+      MYSQL_DATABASE: hexagonal
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
