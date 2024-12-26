@@ -2,6 +2,7 @@
 # Proyecto Final Con Spring Boot
 
 Este proyecto es una API RESTful para gestionar usuarios, clientes, ventas y devoluciones. La API está desarrollada utilizando Java con la tecnología Spring Boot, proporcionando un conjunto de endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre los recursos mencionados. Está diseñada para facilitar la integración y el manejo eficiente de las operaciones comerciales dentro de un sistema de ventas.
+
 ## Tabla de Contenidos
 - [Configurar el Proyecto y ejecutar de manera local](#configurar-el-proyecto-y-ejecutar-de-manera-local)
   - [1. Clonar el Repositorio de GitHub](#1-clonar-el-repositorio-de-github)
@@ -15,6 +16,11 @@ Este proyecto es una API RESTful para gestionar usuarios, clientes, ventas y dev
 - [Acceso a la Documentación Swagger](#acceso-a-la-documentación-swagger)
 - [Cómo Probar los Endpoints](#cómo-probar-los-endpoints)
 - [CRUD de usuarios (clientes)](#crud-de-usuarios-clientes)
+- [CRUD de Productos](#crud-de-productos)
+- [CRUD de Ventas](#crud-de-ventas)
+- [CRUD de Devoluciones](#crud-de-devoluciones)
+- [Endpoints adicionales](#endpoints-adicionales)
+
 ## Configurar el Proyecto y ejecutar de manera local
 ### 1. Clonar el Repositorio de GitHub
 Ejecuta el siguiente comando para clonar el proyecto desde GitHub:
@@ -736,10 +742,11 @@ Una vez que obtengas el token, cópialo y pégalo para autorizar el uso de los d
 |---------|--------|-----------|---------------------------------------------------|
 | id      | Integer| Path      | El código de la devolución a actualizar. Ej.: 1        |
 
+
 ---
+## Endpoints adicionales
 
-
-## Obtener todos los productos cuya cantidad disponible (`quantity`) sea menor a 5
+### Obtener todos los productos cuya cantidad disponible (`quantity`) sea menor a 5
 
 - **Método HTTP**: `GET`
 - **Endpoint**: `http://localhost:8080/api/products/warning_stock`
@@ -747,7 +754,7 @@ Una vez que obtengas el token, cópialo y pégalo para autorizar el uso de los d
 
 ---
 
-## Obtener la lista de productos de una determinada venta
+### Obtener la lista de productos de una determinada venta
 
 - **Método HTTP**: `GET`
 - **Endpoint**: `http://localhost:8080/api/sellings/products/{id}`
@@ -760,7 +767,7 @@ Una vez que obtengas el token, cópialo y pégalo para autorizar el uso de los d
 
 ---
 
-## Obtener la sumatoria del monto y también cantidad total de ventas de un determinado día
+### Obtener la sumatoria del monto y también cantidad total de ventas de un determinado día
 
 - **Método HTTP**: GET
 - **Endpoint**: `http://localhost:8080/api/sellings/{selling_date}`
@@ -773,7 +780,7 @@ Una vez que obtengas el token, cópialo y pégalo para autorizar el uso de los d
 
 ---
 
-## Obtener el codigo_venta, el total, la cantidad de productos, el nombre del cliente y el apellido del cliente de la venta con el monto más alto de todas
+### Obtener el codigo_venta, el total, la cantidad de productos, el nombre del cliente y el apellido del cliente de la venta con el monto más alto de todas
 
 - **Método HTTP**: `GET`
 - **Endpoint**: `http://localhost:8080/api/selling/greater-selling`
@@ -781,7 +788,7 @@ Una vez que obtengas el token, cópialo y pégalo para autorizar el uso de los d
 
 ---
 
-## Obtener el codigo_venta, el total, la cantidad de productos, el nombre del cliente y el apellido del cliente de la venta con el monto más bajo de todas
+### Obtener el codigo_venta, el total, la cantidad de productos, el nombre del cliente y el apellido del cliente de la venta con el monto más bajo de todas
 
 - **Método HTTP**: `GET`
 - **Endpoint**: `http://localhost:8080/api/selling/smaller-selling`
@@ -789,7 +796,7 @@ Una vez que obtengas el token, cópialo y pégalo para autorizar el uso de los d
 
 ---
 
-## Obtener la lista de productos que aún no se han vendido por primera vez
+### Obtener la lista de productos que aún no se han vendido por primera vez
 
 - **Método HTTP**: `GET`
 - **Endpoint**: `http://localhost:8080/api/selling/unpurchased-products`
