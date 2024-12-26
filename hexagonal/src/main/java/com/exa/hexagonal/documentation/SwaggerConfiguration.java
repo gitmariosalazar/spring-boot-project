@@ -29,7 +29,7 @@ import org.springframework.http.HttpHeaders;
                         url = "http://localhost:8080"),
                 @Server(
                 description = "PROD Server",
-                url = "https://www.mssalazar.com/api/users"),
+                url = "https://app-hexagonal-mariosalazar.onrender.com"),
                },
         security = @SecurityRequirement(
                 name = "Security Token"
