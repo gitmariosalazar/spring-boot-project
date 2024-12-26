@@ -14,7 +14,7 @@ Este proyecto es una API RESTful para gestionar usuarios, clientes, ventas y dev
 - [Ejemplos de Cómo Probar los Endpoints](#ejemplos-de-cómo-probar-los-endpoints)
 - [Acceso a la Documentación Swagger](#acceso-a-la-documentación-swagger)
 - [Cómo Probar los Endpoints](#cómo-probar-los-endpoints)
-- 
+- [CRUD de usuarios (clientes)](#crud-de-usuarios-clientes)
 ## Configurar el Proyecto y ejecutar de manera local
 ### 1. Clonar el Repositorio de GitHub
 Ejecuta el siguiente comando para clonar el proyecto desde GitHub:
